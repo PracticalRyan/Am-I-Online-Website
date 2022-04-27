@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <title>Am I Online?</title>
+        <link rel="stylesheet" href="Style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/NetworkStatus.js" async></script>
+    </head>
+    <body id="body">
+        <!--?Navigation bar-->
+        <div id="menuBar">  
+            <h3 id="pageTitle">Am I Online?</h3>
+            <label id="testIntervalLabel" for="testInterval">Test interval</label>
+            <select name="testInterval" id="testInterval">
+                <option value="0">Never</option>
+                <option value="5000">5 seconds</option>
+                <option value="15000" selected>15 seconds</option>
+                <option value="30000">30 seconds</option>
+                <option value="60000">60 seconds</option>
+            </select>
+        </div>
+        <button title="Click to re-test" id="main">
+            <h2>You are currently</h2>
+            <h1 id="status"></h1>
+        </button>
+        <footer>
+            <p id="copyright">&copy; Copyright 2022, Ryan Gleeson</button>
+            <p>Made with &#x1F496 in Bangkok</p>
+        </footer>
+    </body>
+</html>
