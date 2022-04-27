@@ -17,7 +17,7 @@ const checkOnlineStatus = async() =>{
     }
 };
 
-const getOnlineStatus = async() =>{
+const updateStatus = async() =>{
     statusDisplay.innerHTML = "Checking"
     background.style.backgroundColor = "#e0b124"
     const result = await checkOnlineStatus();
@@ -25,24 +25,21 @@ const getOnlineStatus = async() =>{
     background.style.backgroundColor = result ? "#20ab3a" : "#bf3a22"
 };
 
-function intervalChanged(){
-    getOnlineStatus();
-    clearInterval(currentInterval)
-    currentInterval = setInterval(getOnlineStatus, interval);
-};
-
-refreshButton.addEventListener("click", intervalChanged);
-
-intervalSelector.onchange = function(){
+function changeInterval(){
     interval = intervalSelector.value;
-    console.log(interval)
     if (interval != 0){
-        intervalChanged();
-    }
-    else{
-        clearInterval(currentInterval);
+        currentInterval = setInterval(getStatus, interval);
     }
 };
 
-getOnlineStatus();
-var currentInterval = setInterval(getOnlineStatus, interval);
+function getStatus(){
+    clearInterval(currentInterval);
+    updateStatus();
+    changeInterval();
+};
+
+refreshButton.addEventListener("click", getStatus);
+intervalSelector.addEventListener("change", getStatus);
+
+var currentInterval = setInterval(getStatus, interval);
+getStatus();
