@@ -33,6 +33,10 @@ html, body
     white-space: nowrap;
 }
 
+#testIntervalLabel {
+    margin-left: auto;
+}
+
 #testInterval
 {
     border-radius: 0.6vw;
@@ -87,8 +91,9 @@ footer
     #pageTitle {
         display: none;
     }
-    #testInterval {
+    #testIntervalLabel {
         margin-right: auto;
+        margin-left: 3vw;
     }
     #madeWith {
         display: none;
