@@ -2,9 +2,9 @@
 <html lang="en"> 
     <head>
         <title>Am I Online?</title>
-        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="styles/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="js/NetworkStatus.js" async></script>
+        <script src="scripts/networkstatus.js" async></script>
     </head>
     <body id="body">
         <!--?Navigation bar-->
@@ -28,4 +28,11 @@
             <p>Made with &#x1F496 in Bangkok</p>
         </footer>
     </body>
+    <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker
+                   .register('/sw.js')
+                   .then(function() { console.log("Service Worker Registered"); });
+        }
+        </script>        
 </html>
