@@ -33,11 +33,6 @@ html, body
     white-space: nowrap;
 }
 
-#testIntervalLabel
-{
-    margin-left: auto;
-}
-
 #testInterval
 {
     border-radius: 0.6vw;
@@ -86,4 +81,19 @@ footer
 #copyright
 {
     margin-right: auto;
+}
+
+@media only screen and (max-width: 360px) {
+    #pageTitle {
+        display: none;
+    }
+    #testInterval {
+        margin-right: auto;
+    }
+    #madeWith {
+        display: none;
+    }
+    #copyright {
+        margin-left: auto;
+    }
 }

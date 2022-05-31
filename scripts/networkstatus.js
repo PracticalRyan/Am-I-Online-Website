@@ -17,7 +17,7 @@ const checkOnlineStatus = async() =>{
 };
 
 const updateStatus = async() =>{
-    statusDisplay.innerHTML = "Checking"
+    statusDisplay.innerHTML = "Connecting"
     background.style.backgroundColor = "#e0b124"
     const result = await checkOnlineStatus();
     statusDisplay.innerHTML = result ? "Online" : "Offline"
