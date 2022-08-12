@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <script src="scripts/networkstatus.js" async></script>
+        <script src="scripts/infoToggle.js" async></script>
     </head>
     <body id="body">
         <!--Navigation bar-->
@@ -28,12 +29,21 @@
             <h2>You are currently</h2>
             <h1 id="status"></h1>
         </button>
+        
+        <!--Information-->
+        <div id="infoContainer">
+            <div id="infoModal">
+                <p>This website can check if you're online. It even works while offline! Just type "www.amionline.ml" into the browser.</p>
+            </div>
+        </div>
 
         <!--Footer-->
         <footer>
-            <p id="copyright">&copy; Copyright 2022</button>
-            <p id="info">ℹ️</p>
-            <p id="madeWith">Made with ❤️ in Bangkok</p>
+            <p class="copyright">&copy; Copyright 2022</p>
+            <div class="info">
+                <button id="infoButton" title="Info">i</button>
+            </div>
+            <p class="madeWith">Made in Bangkok</p>
         </footer>
     </body>
 
