@@ -11,8 +11,8 @@ html, body
 {
     display: flex;
     flex-direction: column;
-    padding: 0%;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     height: 100%;
 }
 
@@ -23,7 +23,7 @@ html, body
     align-items: center;
     background-color: #232323;
     padding: 0.2em;
-    height: 4em;
+    height: 3.5em;
     color: #fff;
 }
 
@@ -31,6 +31,7 @@ img
 {
     height: 90%;
 }
+
 #menuBar *
 {
     margin: 0px 0.3em;
@@ -69,40 +70,44 @@ img
     margin: 0%;
 }
 
-#refreshButton
-{ 
-    background:none; border:none; 
-}
-
 footer
 {
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 3em;
     white-space: nowrap;
     color: #fff;
-    font-size: 1.5vh;
-    padding: 0vw 1vw;
+    font-size: 1.6vh;
     background-color: #23232316;
 }
 
-#copyright
+footer *
 {
-    margin-right: auto;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0%;
+    padding: 0 1em;
 }
 
-@media only screen and (max-width: 360px) {
+footer p:nth-child(2)
+{
+    text-align: center;
+    font-size: 2.7vh;
+}
+
+footer p:nth-child(3)
+{
+    text-align: right;
+}
+
+@media only screen and (max-width: 400) {
     #pageTitle {
         display: none;
-    }
-    #testIntervalLabel {
-        margin-right: auto;
-        margin-left: 3vw;
     }
     #madeWith {
         display: none;
     }
     #copyright {
-        margin-left: auto;
+        display: none;
     }
 }

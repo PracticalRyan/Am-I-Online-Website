@@ -5,12 +5,14 @@
         <link rel="icon" href="/images/websiteicon.png">
         <link rel="stylesheet" href="styles/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
         <script src="scripts/networkstatus.js" async></script>
     </head>
     <body id="body">
-        <!--?Navigation bar-->
-        <div id="menuBar">  
+        <!--Navigation bar-->
+        <div id="menuBar">
             <img src="/images/websiteicon.png">
+            <p id="pageTitle">Am I Online?</p>
             <label id="testIntervalLabel" for="testInterval">Test interval</label>
             <select name="testInterval" id="testInterval">
                 <option value="0">Never</option>
@@ -20,15 +22,21 @@
                 <option value="60000">60 seconds</option>
             </select>
         </div>
+
+        <!--Network status-->
         <button title="Click to test" id="main">
             <h2>You are currently</h2>
             <h1 id="status"></h1>
         </button>
+
+        <!--Footer-->
         <footer>
             <p id="copyright">&copy; Copyright 2022</button>
+            <p id="info">ℹ️</p>
             <p id="madeWith">Made with ❤️ in Bangkok</p>
         </footer>
     </body>
+
     <script>
         if('serviceWorker' in navigator) {
           navigator.serviceWorker
