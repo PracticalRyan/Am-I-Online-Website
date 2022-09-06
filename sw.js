@@ -21,11 +21,11 @@ const cacheFirst = async (request) => {
   if (responseFromCache) {
     return responseFromCache;
   }
-  
+
   try {
     return fetch(request);
   }
-  catch(error) {
+  catch (error) {
     return new Response('There was a network error', {
       status: 408,
       headers: { 'Content-Type': 'text/plain' },

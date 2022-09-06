@@ -4,19 +4,17 @@ const intervalSelector = document.getElementById("testInterval")
 const refreshButton = document.getElementById("main")
 var interval = intervalSelector.value;
 
-const checkOnlineStatus = async() =>{
-    try
-    {
-        const online = await fetch("images/tinygif.gif", {cache: "no-cache"})
+const checkOnlineStatus = async () => {
+    try {
+        const online = await fetch("images/tinygif.gif", { cache: "no-cache" })
         return online.status >= 200 && online.status < 300
     }
-    catch (err)
-    {
+    catch (err) {
         return false;
     }
 };
 
-const updateStatus = async() =>{
+const updateStatus = async () => {
     statusDisplay.innerHTML = "Connecting"
     background.style.backgroundColor = "#e0b124"
     const result = await checkOnlineStatus();
@@ -24,14 +22,14 @@ const updateStatus = async() =>{
     background.style.backgroundColor = result ? "#20ab3a" : "#bf3a22"
 };
 
-function changeInterval(){
+function changeInterval() {
     interval = intervalSelector.value;
-    if (interval != 0){
+    if (interval != 0) {
         currentInterval = setInterval(getStatus, interval);
     }
 };
 
-function getStatus(){
+function getStatus() {
     clearInterval(currentInterval);
     updateStatus();
     changeInterval();

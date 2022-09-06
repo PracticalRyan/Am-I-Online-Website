@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
 /*?Default properties*/
-* 
-{
+* {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-html, body
-{
+html,
+body {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -16,8 +15,7 @@ html, body
     height: 100%;
 }
 
-#menuBar
-{
+#menuBar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,13 +25,11 @@ html, body
     color: #fff;
 }
 
-img
-{
+img {
     height: 90%;
 }
 
-#menuBar *
-{
+#menuBar * {
     margin: 0px 0.3em;
     white-space: nowrap;
 }
@@ -42,40 +38,34 @@ img
     margin-left: auto;
 }
 
-#testInterval
-{
+#testInterval {
     border-radius: 0.6vw;
 }
 
-#main
-{
+#main {
     color: #fff;
     height: 100%;
     background-color: transparent;
     border-color: transparent;
 }
 
-#main h1
-{
-    font-size: 16vmin
+#main h1 {
+    font-size: 16vmin;
 }
 
-#main h2
-{
+#main h2 {
     font-size: 6vmin;
 }
 
-#status
-{
+#status {
     margin: 0%;
 }
 
-#infoContainer
-{
+#infoContainer {
     display: flex;
     position: fixed;
     flex-direction: row;
-    align-items:flex-end;
+    align-items: flex-end;
     justify-content: center;
     height: 100vh;
     width: 100vw;
@@ -83,8 +73,7 @@ img
     opacity: 0;
 }
 
-#infoModal
-{
+#infoModal {
     align-items: center;
     color: #fff;
     justify-content: center;
@@ -100,8 +89,7 @@ img
     opacity: 1;
 }
 
-footer
-{
+footer {
     display: flex;
     align-items: center;
     height: 55px;
@@ -111,22 +99,19 @@ footer
     background-color: #23232316;
 }
 
-footer *
-{
+footer * {
     flex-grow: 1;
     flex-basis: 0;
     margin: 0%;
     padding: 0 1em;
 }
 
-.info
-{
+.info {
     text-align: center;
     font-size: 2.7vh;
 }
 
-.info button
-{
+.info button {
     text-align: center;
     font-size: 2vh;
     background-color: #00a6ed;
@@ -138,19 +123,19 @@ footer *
     padding: 0%;
 }
 
-.madeWith
-{
+.madeWith {
     text-align: right;
 }
 
-@media only screen and (max-width: 410px) 
-{
+@media only screen and (max-width: 410px) {
     #pageTitle {
         display: none;
     }
+
     .madeWith {
         display: none;
     }
+
     .copyright {
         display: none;
     }
