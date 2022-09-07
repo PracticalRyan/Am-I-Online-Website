@@ -8,6 +8,17 @@ const urlsToCache = [
   "/index.html",
 ];
 
+// Install the service worker and open the cache and add files mentioned in array to cache
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+      caches.open(CACHE_NAME)
+          .then(function(cache) {
+              console.log('Opened cache');
+              return cache.addAll(urlsToCache);
+          })
+  );
+});
+
 // Listens to request from application.
 self.addEventListener('fetch', function(event) {
   event.respondWith(
