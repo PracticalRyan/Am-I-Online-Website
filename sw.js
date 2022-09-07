@@ -1,38 +1,42 @@
-const addResourcesToCache = async (resources) => {
-  const cache = await caches.open("v2");
-  await cache.addAll(resources);
-};
+const CACHE_NAME = "v1";
+const urlsToCache = [
+  "/",
+  "/images/websiteicon.png",
+  "/scripts/networkstatus.js",
+  "/scripts/infoToggle.js",
+  "/styles/style.css",
+  "/index.html",
+];
 
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    addResourcesToCache([
-      "/",
-      "/images/websiteicon.png",
-      "/scripts/networkstatus.js",
-      "/scripts/infoToggle.js",
-      "/styles/style.css",
-      "/index.html",
-    ])
+// Listens to request from application.
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+      caches.match(event.request)
+          .then(function(response) {
+              if (response) {
+                  // The requested file exists in the cache so we return it from the cache.
+                  return response;
+              }
+
+              // The requested file is not present in cache so we send it forward to the internet
+              return fetch(event.request);
+          }
+      )
   );
 });
 
-const cacheFirst = async (request) => {
-  const responseFromCache = await caches.match(request);
-  if (responseFromCache) {
-    return responseFromCache;
-  }
-
-  try {
-    return fetch(request);
-  }
-  catch (error) {
-    return new Response('There was a network error', {
-      status: 408,
-      headers: { 'Content-Type': 'text/plain' },
-    });
-  }
-};
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(cacheFirst(event.request));
+self.addEventListener('activate', function(event) {
+  var cacheWhitelist = []; // add cache names which you do not want to delete
+  cacheWhitelist.push(CACHE_NAME);
+  event.waitUntil(
+      caches.keys().then(function(cacheNames) {
+          return Promise.all(
+              cacheNames.map(function(cacheName) {
+                  if (!cacheWhitelist.includes(cacheName)) {
+                      return caches.delete(cacheName);
+                  }
+              })
+          );
+      })
+  );
 });
