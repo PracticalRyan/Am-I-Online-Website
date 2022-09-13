@@ -56,11 +56,11 @@
                 navigator.serviceWorker.register('sw.js')
                     .then(registration => {
                         // Registration was successful
-                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                        console.log('Successfully saved the website for offline use, you can enter this website while offline by entering www.amionline.ml in this browser');
                     })
                     .catch(err => {
                         // registration failed :(
-                        console.log('ServiceWorker registration failed: ', err);
+                        console.log('We were unable to save the website for offline use :( Error: ', err);
                     });
             });
         }
