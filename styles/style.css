@@ -71,34 +71,6 @@ img {
     margin: 0%;
 }
 
-#infoContainer {
-    display: flex;
-    position: fixed;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    pointer-events: none;
-    opacity: 0;
-}
-
-#infoModal {
-    align-items: center;
-    color: #fff;
-    justify-content: center;
-    position: fixed;
-    width: 300px;
-    background-color: #232323;
-    padding: 1.5px 15px;
-    border-radius: 20px;
-    margin: 55px;
-}
-
-#infoContainer.show {
-    opacity: 1;
-}
-
 footer {
     display: flex;
     align-items: center;
