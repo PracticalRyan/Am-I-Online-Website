@@ -1,6 +1,7 @@
-const CACHE_NAME = "v3";
+const CACHE_NAME = "v3.1";
 const urlsToCache = [
     "/",
+    "/manifest.json",
     "/index.html",
     "/images/websiteicon.png",
     "/scripts/networkstatus.js",
