@@ -1,4 +1,4 @@
-const CACHE_NAME = "v3.2";
+const CACHE_NAME = "v2.5";
 const urlsToCache = [
     "/",
     "/manifest.json",
