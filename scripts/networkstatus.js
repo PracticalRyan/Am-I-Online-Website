@@ -6,7 +6,7 @@ var interval = intervalSelector.value;
 
 const checkOnlineStatus = async () => {
     try {
-        const online = await fetch("Images/TinyGif.gif", { cache: "no-cache" })
+        const online = await fetch("images/TinyGif.gif", { cache: "no-cache" })
         return online.status >= 200 && online.status < 300
     }
     catch (err) {
