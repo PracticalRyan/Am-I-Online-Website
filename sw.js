@@ -1,14 +1,14 @@
-const CACHE_NAME = "v2.6";
+const CACHE_NAME = "v2.5";
 const urlsToCache = [
-    "./",
-    "./manifest.json",
-    "./index.html",
-    "./images/websiteicon.png",
-    "./scripts/networkstatus.js",
-    "./scripts/infoToggle.js",
-    "./styles/style.css",
-    "./fonts/Poppins-Bold.woff2",
-    "./fonts/Poppins-Regular.woff2"
+    "/",
+    "/manifest.json",
+    "/index.html",
+    "/images/websiteicon.png",
+    "/scripts/networkstatus.js",
+    "/scripts/infoToggle.js",
+    "/styles/style.css",
+    "/fonts/Poppins-Bold.woff2",
+    "/fonts/Poppins-Regular.woff2"
 ];
 
 // Install the service worker and open the cache and add files mentioned in array to cache
