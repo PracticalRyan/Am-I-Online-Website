@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Am I Online?</title>
-    <link rel="icon" href="/images/websiteicon.png">
-    <meta name="description" content="Get the status of your internet connection, or find out when the internet comes back online. It even works offline!">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="/images/websiteicon.png" />
+    <meta
+      name="description"
+      content="Get the status of your internet connection, or find out when the internet comes back online. It even works offline!"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="manifest" href="manifest.json" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <meta name="google-site-verification" content="x-fxTUkQ71uHsIdS82y_rvsaGrJyxzdCX04Iq-bou-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="x-fxTUkQ71uHsIdS82y_rvsaGrJyxzdCX04Iq-bou-8"
+    />
     <script src="scripts/networkstatus.js" async></script>
-</head>
+  </head>
 
-<body id="body">
+  <body id="body">
     <!--Navigation bar-->
     <div id="menuBar">
-        <img src="/images/websiteicon.png">
-        <p id="pageTitle">Am I Online?</p>
-        <label id="testIntervalLabel" for="testInterval">Test interval</label>
-        <select name="testInterval" id="testInterval">
-            <option value="0">Never</option>
-            <option value="5000">5 seconds</option>
-            <option value="15000" selected>15 seconds</option>
-            <option value="30000">30 seconds</option>
-            <option value="60000">60 seconds</option>
-        </select>
+      <img src="/images/websiteicon.png" />
+      <p id="pageTitle">Am I Online?</p>
+      <label id="testIntervalLabel" for="testInterval">Test interval</label>
+      <select name="testInterval" id="testInterval">
+        <option value="0">Never</option>
+        <option value="5000">5 seconds</option>
+        <option value="15000" selected>15 seconds</option>
+        <option value="30000">30 seconds</option>
+        <option value="60000">60 seconds</option>
+      </select>
     </div>
 
     <!--Network status-->
     <button title="Click to test" id="main">
-        <h2>You are currently</h2>
-        <h1 id="status"></h1>
+      <h2>You are currently</h2>
+      <h1 id="status"></h1>
     </button>
 
     <!--Footer-->
     <footer>
-        <p class="copyright">&copy; Copyright 2022</p>
-        <p class="madeWith">Made with ❤️ in Bangkok</p>
+      <p class="copyright">&copy; Copyright 2022</p>
+      <p class="madeWith">Made with ❤️ in Bangkok</p>
     </footer>
 
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('sw.js')
-                    .then(registration => {
-                        // Registration was successful
-                        console.log('Successfully saved the website for offline use, you can enter this website while offline by entering www.amionline.ml in this browser');
-                    })
-                    .catch(err => {
-                        // registration failed :(
-                        console.log('We were unable to save the website for offline use :( Error: ', err);
-                    });
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("sw.js")
+            .then((registration) => {
+              // Registration was successful
+              console.log(
+                "Successfully saved the website for offline use, you can enter this website while offline by entering www.amionline.ml in this browser"
+              );
+            })
+            .catch((err) => {
+              // registration failed :(
+              console.log(
+                "We were unable to save the website for offline use :( Error: ",
+                err
+              );
             });
-        }
+        });
+      }
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,124 +1,124 @@
 @font-face {
-    font-family: poppins;
-    src: url(/fonts/Poppins-Regular.woff2);
-    font-weight: 400;
+  font-family: poppins;
+  src: url(/fonts/Poppins-Regular.woff2);
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: poppins;
-    src: url(/fonts/Poppins-Bold.woff2);
-    font-weight: bold;
+  font-family: poppins;
+  src: url(/fonts/Poppins-Bold.woff2);
+  font-weight: bold;
 }
 
 /*?Default properties*/
 * {
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 html,
 body {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
 #menuBar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #232323;
-    padding: 0.2em;
-    height: 3.5em;
-    color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #232323;
+  padding: 0.2em;
+  height: 3.5em;
+  color: #fff;
 }
 
 img {
-    height: 90%;
+  height: 90%;
 }
 
 #menuBar * {
-    margin: 0px 0.3em;
-    white-space: nowrap;
+  margin: 0px 0.3em;
+  white-space: nowrap;
 }
 
 #testIntervalLabel {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 #testInterval {
-    border-radius: 0.6vw;
+  border-radius: 0.6vw;
 }
 
 #main {
-    color: #fff;
-    height: 100%;
-    background-color: transparent;
-    border-color: transparent;
+  color: #fff;
+  height: 100%;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 #main h1 {
-    font-size: 16vmin;
+  font-size: 16vmin;
 }
 
 #main h2 {
-    font-size: 6vmin;
+  font-size: 6vmin;
 }
 
 #status {
-    margin: 0%;
+  margin: 0%;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    height: 55px;
-    white-space: nowrap;
-    color: #fff;
-    font-size: 1.6vh;
-    background-color: #23232316;
+  display: flex;
+  align-items: center;
+  height: 55px;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 1.6vh;
+  background-color: #23232316;
 }
 
 footer * {
-    flex-grow: 1;
-    flex-basis: 0;
-    margin: 0%;
-    padding: 0 1em;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 0%;
+  padding: 0 1em;
 }
 
 .info {
-    text-align: center;
-    font-size: 2.7vh;
+  text-align: center;
+  font-size: 2.7vh;
 }
 
 .info button {
-    text-align: center;
-    font-size: 2vh;
-    background-color: #00a6ed;
-    border: none;
-    height: 36px;
-    width: 36px;
-    border-radius: 20%;
-    color: #fff;
-    padding: 0%;
+  text-align: center;
+  font-size: 2vh;
+  background-color: #00a6ed;
+  border: none;
+  height: 36px;
+  width: 36px;
+  border-radius: 20%;
+  color: #fff;
+  padding: 0%;
 }
 
 .madeWith {
-    text-align: right;
+  text-align: right;
 }
 
 @media only screen and (max-width: 410px) {
-    #pageTitle {
-        display: none;
-    }
+  #pageTitle {
+    display: none;
+  }
 
-    .madeWith {
-        text-align: center;
-    }
+  .madeWith {
+    text-align: center;
+  }
 
-    .copyright {
-        display: none;
-    }
+  .copyright {
+    display: none;
+  }
 }
