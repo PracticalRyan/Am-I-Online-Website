@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.ryangl.online.twa",
+        "sha256_cert_fingerprints": ["11:AB:E2:63:C7:18:EF:C0:2F:F6:82:9D:FD:93:B7:BC:80:55:8C:D1:DB:FD:20:52:C1:44:22:B6:3E:73:A0:88"]
+      }
+    }]
